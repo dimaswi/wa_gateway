@@ -1,0 +1,18 @@
+version: '3.8'
+
+networks:
+    webapp:
+services:
+    db:
+        image: postgres
+        container_name: postgres
+        volumes:
+            - ./postgresql/data:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_DB: whatsapp
+            POSTGRES_USER: dimas
+            POSTGRES_PASSWORD: dimas1950
+        networks:
+            - webapp
