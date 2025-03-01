@@ -16,3 +16,4 @@ services:
             POSTGRES_PASSWORD: dimas1950
         networks:
             - webapp
+    
