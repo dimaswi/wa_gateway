@@ -4,16 +4,17 @@ networks:
     webapp:
 services:
     db:
-        image: postgres
-        container_name: postgres
+        image: mysql
+        container_name: mysql
         volumes:
             - ./postgresql/data:/var/lib/postgresql/data
         ports:
             - "5432:5432"
         environment:
-            POSTGRES_DB: whatsapp
-            POSTGRES_USER: dimas
-            POSTGRES_PASSWORD: dimas1950
+            MYSQL_ROOT_PASSWORD: dimas1950
+            MYSQL_USER: dimas
+            MYSQL_PASSWORD: dimas1950
+            MYSQL_DATABASE: office
         networks:
             - webapp
     
